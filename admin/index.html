@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - FilmyMaxz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #667eea;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+        .success {
+            background: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .checkbox-group input {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 FilmyMaxz Admin Panel</h1>
+    
+    <div class="container">
+        <!-- Add Movie Section -->
+        <div class="section">
+            <h2>➕ Add New Movie</h2>
+            <div class="success" id="movieSuccess">Movie added successfully!</div>
+            
+            <label>Title</label>
+            <input type="text" id="title" placeholder="Enter movie title">
+            
+            <label>Poster URL</label>
+            <input type="text" id="poster" placeholder="https://example.com/poster.jpg">
+            
+            <label>Category</label>
+            <select id="category">
+                <option>Bollywood</option>
+                <option>Hollywood</option>
+                <option>South Indian</option>
+                <option>Web Series</option>
+                <option>Old Movies</option>
+            </select>
+            
+            <label>Rating</label>
+            <input type="text" id="rating" placeholder="8.5/10">
+            
+            <label>Story</label>
+            <textarea id="story" rows="4" placeholder="Enter movie story..."></textarea>
+            
+            <label>Download Link 1 (480p)</label>
+            <input type="text" id="link1" placeholder="https://...">
+            
+            <label>Download Link 2 (720p)</label>
+            <input type="text" id="link2" placeholder="https://...">
+            
+            <label>Download Link 3 (1080p)</label>
+            <input type="text" id="link3" placeholder="https://...">
+            
+            <button onclick="addMovie()">Add Movie</button>
+        </div>
+
+        <!-- Ad Settings Section -->
+        <div class="section">
+            <h2>📢 Ad Settings</h2>
+            <div class="success" id="adSuccess">Settings updated successfully!</div>
+            
+            <label>Ad Banner URL (Full Page Ad)</label>
+            <input type="text" id="adBanner" placeholder="https://example.com/ad-page">
+            
+            <label>Movie Click Ad Timer (seconds)</label>
+            <input type="number" id="movieAdTimer" value="5">
+            
+            <label>Download Click Ad Timer (seconds)</label>
+            <input type="number" id="downloadAdTimer" value="10">
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="adsEnabled" checked>
+                <label>Enable Ads</label>
+            </div>
+            
+            <button onclick="updateSettings()">Update Settings</button>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
