@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmyMaxz - Movies & Web Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🎬 FilmyMaxz</h1>
+        <div class="header-controls">
+            <input type="text" id="searchBox" placeholder="Search movies...">
+            <button id="refreshBtn">🔄 Refresh</button>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <div class="categories" id="categories">
+        <button class="cat-btn active" data-cat="All">All</button>
+    </div>
+
+    <!-- Movies Grid -->
+    <div class="movies-grid" id="moviesGrid"></div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+
+    <!-- Movie Popup -->
+    <div class="popup" id="moviePopup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <div id="popupBody"></div>
+        </div>
+    </div>
+
+    <!-- Ad Popup -->
+    <div class="ad-popup" id="adPopup">
+        <div class="ad-content">
+            <div class="ad-timer" id="adTimer">Ad: 5s</div
+            <iframe id="adFrame" frameborder="0"></iframe>
+            <button id="skipAd" style="display:none;">Skip Ad</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
