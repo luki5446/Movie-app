@@ -1,0 +1,2 @@
+PORT=3000
+MONGO_URI=mongodb+srv://Luki:luki%401234@filmymaxz.9npg2xc.mongodb.net/MovieDB?retryWrites=true&w=majority&appName=Filmymaxz
